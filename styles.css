@@ -1,28 +1,12 @@
 /* Estilos generales */
-/*body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f3f4f6;
-}*/
-
-.container {
-    text-align: center;
-}
-
-section{
-    font-size: large;
-    font-family: Arial;
-}
-
-main {
-    flex: 1; /* Crece para llenar el espacio disponible */
-    padding: 20px;
-    text-align: center;
+    flex-direction: column; /* Coloca los elementos en una columna */
+    min-height: 100vh; /* Asegura que el contenido ocupe toda la ventana */
+    background-color: #ffffff; /* Color de fondo */
 }
 
 header {
@@ -31,6 +15,7 @@ header {
     padding: 20px 0;
     border-bottom: 2px solid #d0d0d0; /* Línea inferior para delimitar */
     font-family: 'Courier New', Courier, monospace;
+    flex-shrink: 0; /* Evita que el header se reduzca */
 }
 
 footer {
@@ -38,6 +23,24 @@ footer {
     text-align: center;
     padding: 10px 0;
     border-top: 2px solid #d0d0d0;
+    flex-shrink: 0; /* Evita que el footer se reduzca */
+}
+
+main {
+    flex: 1; /* Permite que el main crezca para llenar el espacio disponible */
+    max-width: 800px; /* Ancho máximo del contenido principal */
+    margin: auto; /* Centrar horizontalmente */
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff; /* Fondo blanco para destacar */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+section {
+    font-size: large;
+    font-family: Arial, sans-serif;
+    line-height: 1.6; /* Mejora la legibilidad */
 }
 
 h1 {
