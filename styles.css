@@ -78,7 +78,7 @@ button:active {
 button.card {
     all: unset; /* Elimina los estilos predeterminados del botón */
     display: block;
-    min-width: 300px;
+    min-width: 300px; /* Ajuste del ancho mínimo */
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -94,16 +94,11 @@ button.card img {
     object-fit: cover;
 }
 
-button.card h3 {
-    margin: 10px;
-    font-size: 1.2em;
-    color: #333;
-}
-
-button.card p {
+button.card h3, button.card p {
     margin: 10px;
     font-size: 1em;
-    color: #777;
+    color: #333;
+    word-wrap: break-word; /* Evita desbordamiento de texto */
 }
 
 /* Animación al pasar el mouse */
@@ -120,15 +115,49 @@ button.card:hover {
     padding: 10px;
 }
 
-img {
-    max-width: 600px; /* Ancho máximo */
-    max-height: 400px; /* Altura máxima */
-    width: auto; /* Escala proporcional */
-    height: auto; /* Escala proporcional */
-    
-}
-
 /* Ocultar barra de desplazamiento */
 .carrusel::-webkit-scrollbar {
     display: none;
+}
+
+img {
+    max-width: 100%; /* Ajusta el ancho de las imágenes al contenedor */
+    height: auto; /* Escala proporcional */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    /* Carrusel: Tarjetas más pequeñas */
+    button.card {
+        min-width: 200px; /* Ancho reducido en tablets */
+    }
+
+    /* Ajuste de textos en móviles */
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    section {
+        font-size: medium;
+    }
+
+    .carrusel {
+        gap: 10px; /* Reduce espacio entre tarjetas */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Carrusel: Tarjetas aún más pequeñas */
+    button.card {
+        min-width: 120px; /* Ajuste para pantallas muy pequeñas */
+    }
+
+    /* Texto más pequeño */
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    section {
+        font-size: small;
+    }
 }
