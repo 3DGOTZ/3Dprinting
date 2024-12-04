@@ -120,6 +120,11 @@ button.card:hover {
     padding: 10px;
 }
 
+/* Ocultar barra de desplazamiento */
+.carrusel::-webkit-scrollbar {
+    display: none;
+}
+
 img {
     max-width: 600px; /* Ancho máximo */
     max-height: 400px; /* Altura máxima */
@@ -128,7 +133,39 @@ img {
     
 }
 
-/* Ocultar barra de desplazamiento */
-.carrusel::-webkit-scrollbar {
-    display: none;
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    /* Carrusel: Tarjetas más pequeñas */
+    button.card {
+        min-width: 200px;
+    }
+
+    /* Ajuste de textos en móviles */
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    section {
+        font-size: medium;
+    }
+
+    .carrusel {
+        gap: 10px; /* Reduce espacio entre tarjetas */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Carrusel: Tarjetas aún más pequeñas */
+    button.card {
+        min-width: 150px;
+    }
+
+    /* Texto más pequeño */
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    section {
+        font-size: small;
+    }
 }
