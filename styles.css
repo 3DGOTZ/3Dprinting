@@ -120,6 +120,14 @@ button.card:hover {
     padding: 10px;
 }
 
+img {
+    max-width: 600px; /* Ancho máximo */
+    max-height: 400px; /* Altura máxima */
+    width: auto; /* Escala proporcional */
+    height: auto; /* Escala proporcional */
+    
+}
+
 /* Ocultar barra de desplazamiento */
 .carrusel::-webkit-scrollbar {
     display: none;
