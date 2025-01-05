@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas</title>
+    <!-- Agregar aquí tus estilos o enlaces a hojas de estilo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pruebas necesarias</h1>
+        <!-- Navegación u otros elementos importantes -->
+    </header>
+    
+    <main>
+    <p>
+        Prueba de Temperatura de la Boquilla (Hotend) </br>
+        El ajuste adecuado de la temperatura de la boquilla es fundamental para evitar atascos o problemas de extrusión.</br>
+        Cómo realizar la prueba:</br>
+        Paso 1: Usa un filamento común como PLA, que tiene un rango de temperatura recomendado entre 190°C y 220°C.</br>
+        Paso 2: Imprime un objeto pequeño, como un cubo de calibración, con la temperatura de boquilla en 200°C.</br>
+        Paso 3: Observa cómo se extruye el material. Si el material fluye demasiado rápido o con burbujas de aire, puede ser una señal de que la temperatura es demasiado alta. Si la extrusión es inconsistente o no fluye, es posible que la temperatura sea demasiado baja.</br>
+        Paso 4: Ajusta la temperatura en incrementos de 5-10°C y realiza nuevas pruebas hasta que encuentres la temperatura óptima para tu material. La Kingroon KP3S tiene un rango bastante estable para el PLA, pero los materiales como ABS o PETG requieren temperaturas más altas.</br>
+       
+         Prueba de Retracción</br>
+        La retracción es especialmente importante para evitar el stringing (hilos de material no deseados) en áreas donde la boquilla se desplaza sin imprimir.
+        Cómo realizar la prueba:</br>
+        Paso 1: Imprime un objeto con desplazamientos largos, como una torre de retracción o un test de stringing. Puedes encontrar modelos de prueba de stringing en sitios como Thingiverse.</br>
+        Paso 2: Monitorea el resultado de la impresión. Si notas que el material queda colgando entre las secciones del modelo (stringing), necesitarás ajustar los parámetros de retracción.</br>
+        Paso 3: En el software de slicing </br>
+        o	Distancia de retracción: Comienza con 4 mm y ajusta según sea necesario. Las impresoras Bowden, como la Kingroon KP3S, generalmente requieren distancias de retracción más largas.</br>
+        Velocidad de retracción: Ajusta entre 25 mm/s y 40 mm/s.</br>
+        Paso 4: Realiza impresiones de prueba para evaluar si el stringing ha desaparecido. Si el problema persiste, intenta aumentar la velocidad de retracción o ajustar la temperatura de la boquilla (bajarla ligeramente).</br>
+        
+        Prueba de Adhesión de la Primera Capa</br>
+        La adhesión de la primera capa es crucial para que la impresión sea exitosa, especialmente en la Kingroon KP3S, que no tiene una cama de impresión ultrapequeña.</br>
+        Cómo realizar la prueba:</br>
+        Paso 1: Imprime una primera capa de prueba (como una línea o un cubo de 20x20 mm). Usa PLA y asegúrate de que la temperatura de la cama esté en 60°C y la boquilla en 200°C.</br>
+        Paso 2: Si la primera capa no se adhiere bien, hay algunas cosas que puedes ajustar:</br>
+        Nivelación de la cama: Verifica nuevamente que la boquilla esté a la distancia correcta de la cama.</br>
+        Ajuste de la altura de la boquilla: Asegúrate de que la boquilla esté lo suficientemente cerca de la cama. Si es necesario, ajusta el offset Z en el firmware o en el menú de control de la impresora.</br>
+        Temperatura de la cama: Si no se adhiere bien, prueba aumentar la temperatura de la cama hasta 65°C o incluso 70°C.</br>
+        Paso 3: Si el filamento sigue sin adherirse, también puedes intentar usar un adhesivo de cama, como laca en aerosol, cinta azul o un tratamiento con pegamento.</br>
+   
+        Prueba de Velocidad de Impresión</br>
+        La velocidad de impresión puede afectar la calidad, especialmente en detalles finos.</br>
+        Cómo realizar la prueba:</br>
+        Paso 1: Imprime un objeto pequeño con detalles finos a la velocidad predeterminada de 50 mm/s.</br>
+        Paso 2: Si la pieza tiene bordes irregulares o falta de detalles, intenta reducir la velocidad a 40 mm/s o 30 mm/s.</br>
+        Paso 3: Observa cómo se comporta la impresora. Si las piezas quedan bien a una velocidad más baja, es una señal de que tu impresora funciona mejor con una velocidad reducida para detalles finos.</br>
+        
+        
+        
+        
+        
+        
+        Prueba de Overhangs (Voladizos)</br>
+        La capacidad de la impresora para imprimir voladizos o overhangs (partes que sobresalen sin soporte) depende de cómo maneja la extrusión en ángulos.</br>
+        Cómo realizar la prueba:</br>
+        Paso 1: Imprime un modelo de torre de overhangs, disponible en plataformas como Thingiverse.</br>
+        Paso 2: Observa cómo se comporta la impresora a medida que el ángulo del voladizo aumenta. En la Kingroon KP3S, los ángulos más pronunciados pueden necesitar soportes o ajustes en la temperatura de impresión.</br>
+        Paso 3: Si la impresora tiene dificultades para imprimir los overhangs, puedes mejorar la impresión:</br>
+        Aumenta la temperatura de la boquilla si el filamento no fluye bien.</br>
+        Habilita los soportes en el slicer si el voladizo es mayor de 45°.</br>
+      
+        Prueba de Flujo </br>
+        El flujo incorrecto puede provocar impresiones con paredes gruesas o finas de manera inconsistente.</br>
+        Cómo realizar la prueba:</br>
+        Paso 1: Imprime un cubo de calibración (generalmente de 20 mm de lado) y mide el grosor de las paredes con un calibrador.</br>
+        Paso 2: Si las paredes son demasiado gruesas o finas, ajusta el flujo (flow rate) en el slicer:</br>
+        Si las paredes son muy gruesas, reduce el flujo a 95% o 90%.</br>
+        Si las paredes son demasiado delgadas, aumenta el flujo al 105%.</br>
+        Paso 3: Vuelve a imprimir y verifica si el grosor de las paredes es el adecuado.</br>
+        
+    </p>  
+  </main>
+    
+    <footer>
+        <p>&copy; 2024 Tu Nombre o Compañía. Todos los derechos reservados.</p>
+    </footer>
+    
+    <!-- Agregar aquí tus scripts o enlaces a archivos JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
